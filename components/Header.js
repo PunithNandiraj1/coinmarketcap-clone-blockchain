@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Search from '../assets/svg/search'
-// import { ConnectButton } from 'web3uikit'
+import { ConnectButton } from 'web3uikit'
 // import { useContext } from 'react'
 // import { CoinMarketContext } from '../context/context'
 
@@ -17,7 +17,7 @@ const styles = {
 }
 
 const Header = () => {
-  const { getQuote } = useContext(CoinMarketContext)
+//   const { getQuote } = useContext(CoinMarketContext)
   return (
     <div className={styles.header}>
       <Image
@@ -34,7 +34,7 @@ const Header = () => {
             <div className={styles.badge} />
           </div>
 
-          <div className={styles.navItem} onClick={getQuote}>
+          <div className={styles.navItem}>
             <div className={styles.navLink}>Exchanges</div>
           </div>
 
@@ -67,7 +67,7 @@ const Header = () => {
         </nav>
 
         <div className='flex items-center'>
-          {/* <ConnectButton /> */}
+           <ConnectButton /> 
           <div className={styles.inputContainer}>
             <Search />
             <input className={styles.input} placeholder='Search' />
